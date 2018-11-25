@@ -12,7 +12,10 @@ function iniciar(){
 function subir(){
 	console.log("handler subir");
 
-	var myobj = { name: "Company Inc2", address: "Highway 37" };
+	var dt = new Date();
+	var utcDate = dt.toUTCString();
+
+	var myobj = { name: "Evento", timestamp: utcDate };
 
 	//inserta el log en el repositorio mongodb
 	mongoRepository.insertLog(myobj);
